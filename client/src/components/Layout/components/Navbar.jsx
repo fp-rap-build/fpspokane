@@ -4,6 +4,7 @@ import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 
 import React, { useState } from "react";
 import logo from "../../../images/familypromiselogo.png";
+import { navigate } from "gatsby";
 
 function Navigation() {
   const [show, setShow] = useState(false);
@@ -33,7 +34,8 @@ function Navigation() {
                 className="ml-auto"
                 title="Who We Are"
                 id="navbarScrollingDropdown"
-      
+                renderMenuOnMount
+                onClick={() => navigate("/whoweare")}
               >
                 <NavDropdown.Item
                   className="dropdown-menu-to-hide"
@@ -56,9 +58,10 @@ function Navigation() {
                 <NavDropdown.Item href="/stories">STORIES</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown
-      
                 title="What We Do"
                 id="navbarScrollingDropdown"
+                renderMenuOnMount
+                onClick={() => navigate("/whatwedo")}
               >
                 <NavDropdown.Item href="/needHelp">NEED HELP?</NavDropdown.Item>
                 <NavDropdown.Item href="/prevent">PREVENT</NavDropdown.Item>
@@ -75,9 +78,10 @@ function Navigation() {
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown
-    
                 title="Ways To Give"
                 id="navbarScrollingDropdown"
+                renderMenuOnMount
+                onClick={() => navigate("/give")}
               >
                 <NavDropdown.Item href="/goods-items">
                   GOODS & ITEMS
@@ -90,7 +94,12 @@ function Navigation() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/careers">CAREERS</NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="Events" id="navbarScrollingDropdown">
+              <NavDropdown
+                renderMenuOnMount
+                title="Events"
+                id="navbarScrollingDropdown"
+                onClick={() => navigate("/events")}
+              >
                 <NavDropdown.Item href="/ungala">UnGala 2022</NavDropdown.Item>
                 <NavDropdown.Item href="/nightwithoutabed">
                   Night w/o A Bed
