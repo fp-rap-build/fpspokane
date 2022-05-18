@@ -1,15 +1,15 @@
 @import "../vars.css";
 
 .video {
-    width: 100%;
+  width: 100%;
 
-    object-fit: cover;
-
-    height: 35rem;
+  object-fit: cover;
+  max-height: 687px;
 }
 
 .videoContainer {
   width: 100%;
+  height: 687px;
   position: relative;
 }
 
@@ -19,7 +19,7 @@
 
 .videoOverlay {
   position: absolute;
-
+  height: 100%;
   top: 50%;
   left: 50%;
 
@@ -31,7 +31,10 @@
 .videoOverlay img {
   width: 100%;
 
-  height: auto;
+  margin: 0 auto;
+  width: 686px;
+  height: 687px;
+  object-fit: cover;
 }
 
 .section {
@@ -41,41 +44,76 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  width: 40%;
+  margin-top: 25px;
+  width: 55%;
   text-align: center;
 }
 
+.section button {
+  width: 325px;
+  height: 82px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--main-hap-blue);
+  color: white;
+  font-size: 30px;
+  white-space: nowrap;
+  padding: 0;
+  /* margin: 0; */
+}
+
+.section h3 {
+  font-size: 32px;
+  line-height: 0.5;
+  margin-bottom: 75px !important;
+}
+
+.section h4 {
+  font-size: 26px;
+  max-width: 660.25px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+  margin-bottom: 75px !important;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
 .section * {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-@media(max-width: 1400px) {
-    .section {
-        width: 60%;
-    }
+@media (max-width: 1400px) {
+  .section {
+    width: 60%;
+  }
 
-    .video {
-        height: 30rem;
-    }
+  .video {
+    height: 30rem;
+  }
 }
 
-@media(max-width: 830px) {
-    .section {
-        width: 80%;
-    }
+@media (max-width: 830px) {
+  .section {
+    width: 80%;
+  }
 
-    .video {
-        height: 25rem;
-    }
+  .video {
+    height: 25rem;
+  }
 }
 
-@media(max-width: 500px) {
-    .section {
-        width: 100%;
-    }
+@media (max-width: 500px) {
+  .section {
+    width: 100%;
+  }
 
-    .video {
-        height: 20rem;
-    }
+  .video {
+    height: 20rem;
+  }
 }

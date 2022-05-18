@@ -1,15 +1,14 @@
+import "./Navbar.css";
+
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+
 import React from "react";
-
 import logo from "../../../images/familypromiselogo.png";
-
-import { Navbar, NavDropdown, Nav, Container } from "react-bootstrap";
-
-
 
 function Navigation() {
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg" style={{ margin: 0 }} id="for-shadow">
         <Container fluid>
           <Navbar.Brand href="/">
             <img src={logo} style={{ maxWidth: "200px", height: "auto" }} />
@@ -19,7 +18,7 @@ function Navigation() {
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="justify-content-end"
-              style={{width: "100%" }}
+              style={{ width: "100%" }}
               navbarScroll
             >
               <NavDropdown
@@ -27,7 +26,10 @@ function Navigation() {
                 title="Who We Are"
                 id="navbarScrollingDropdown"
               >
-                <NavDropdown.Item href="/mission">
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/mission"
+                >
                   MISSION & VISION
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/core-values">
@@ -44,7 +46,6 @@ function Navigation() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/stories">STORIES</NavDropdown.Item>
               </NavDropdown>
-
               <NavDropdown title="What We Do" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/needHelp">NEED HELP?</NavDropdown.Item>
                 <NavDropdown.Item href="/prevent">PREVENT</NavDropdown.Item>
@@ -60,7 +61,6 @@ function Navigation() {
                   COVID 19 RESPONSE
                 </NavDropdown.Item>
               </NavDropdown>
-
               <NavDropdown title="Ways To Give" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/goods-items">
                   GOODS & ITEMS
@@ -73,11 +73,8 @@ function Navigation() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/careers">CAREERS</NavDropdown.Item>
               </NavDropdown>
-
               <NavDropdown title="Events" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/ungala">
-                  UnGala 2022
-                </NavDropdown.Item>
+                <NavDropdown.Item href="/ungala">UnGala 2022</NavDropdown.Item>
                 <NavDropdown.Item href="/nightwithoutabed">
                   Night w/o A Bed
                 </NavDropdown.Item>
