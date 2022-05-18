@@ -9,7 +9,6 @@ export default function Index({ children }) {
     <>
       <TopNavigation />
       <Navbar />
-      {/* <SocialLinks /> */}
       <main>{children}</main>
       <Footer />
     </>

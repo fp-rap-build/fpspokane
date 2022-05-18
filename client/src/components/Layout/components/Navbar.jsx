@@ -2,10 +2,18 @@ import "./Navbar.css";
 
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../../images/familypromiselogo.png";
 
 function Navigation() {
+  const [show, setShow] = useState(false);
+  const showDropdown = (e) => {
+    setShow(!show);
+  };
+  const hideDropdown = (e) => {
+    setShow(false);
+  };
+
   return (
     <>
       <Navbar expand="lg" style={{ margin: 0 }} id="for-shadow">
@@ -25,6 +33,7 @@ function Navigation() {
                 className="ml-auto"
                 title="Who We Are"
                 id="navbarScrollingDropdown"
+      
               >
                 <NavDropdown.Item
                   className="dropdown-menu-to-hide"
@@ -46,7 +55,11 @@ function Navigation() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/stories">STORIES</NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="What We Do" id="navbarScrollingDropdown">
+              <NavDropdown
+      
+                title="What We Do"
+                id="navbarScrollingDropdown"
+              >
                 <NavDropdown.Item href="/needHelp">NEED HELP?</NavDropdown.Item>
                 <NavDropdown.Item href="/prevent">PREVENT</NavDropdown.Item>
                 <NavDropdown.Item href="/hap">
@@ -61,7 +74,11 @@ function Navigation() {
                   COVID 19 RESPONSE
                 </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="Ways To Give" id="navbarScrollingDropdown">
+              <NavDropdown
+    
+                title="Ways To Give"
+                id="navbarScrollingDropdown"
+              >
                 <NavDropdown.Item href="/goods-items">
                   GOODS & ITEMS
                 </NavDropdown.Item>
