@@ -17,7 +17,7 @@ function Navigation() {
 
   return (
     <>
-      <Navbar expand="xl" style={{ margin: 0 }} id="for-shadow">
+      <Navbar expand="lg" style={{ margin: 0 }} id="for-shadow">
         <Container fluid>
           <Navbar.Brand href="/">
             <img src={logo} style={{ maxWidth: "200px", height: "auto" }} />
