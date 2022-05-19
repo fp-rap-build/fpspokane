@@ -4,7 +4,6 @@ import * as styles from "../styles/pages/UnGala.module.css";
 import Button from "../components/Global/Button";
 import React from "react";
 import bg_image from "../images/ungala/new_ungala_bg.webp";
-// import image from "../images/ungala/gala.png";
 import image from "../images/ungala/new_ungala.webp";
 import { navigate } from "gatsby";
 import video from "../images/ungala/video.mp4";
@@ -52,6 +51,7 @@ export default function ungala() {
           <Button
             onClick={() => navigate("/donate")}
             color="lightpurple"
+            id="donate-btn"
             style={{
               width: "262px",
               height: "67px",

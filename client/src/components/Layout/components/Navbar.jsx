@@ -13,7 +13,10 @@ function Navigation() {
       <Navbar expand="xl" style={{ margin: 0 }} id="for-shadow" >
         <Container fluid>
           <Navbar.Brand href="/">
-            <img src={logo} style={{ maxWidth: "200px", height: "auto" }} />
+            <img
+              src={logo}
+              style={{ maxWidth: "200px", height: "auto", maxHeight: "100%" }}
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
 
