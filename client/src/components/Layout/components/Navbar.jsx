@@ -7,17 +7,10 @@ import logo from "../../../images/familypromiselogo.png";
 import { navigate } from "gatsby";
 
 function Navigation() {
-  const [show, setShow] = useState(false);
-  const showDropdown = (e) => {
-    setShow(!show);
-  };
-  const hideDropdown = (e) => {
-    setShow(false);
-  };
 
   return (
     <>
-      <Navbar expand="lg" style={{ margin: 0 }} id="for-shadow">
+      <Navbar expand="xl" style={{ margin: 0 }} id="for-shadow" >
         <Container fluid>
           <Navbar.Brand href="/">
             <img src={logo} style={{ maxWidth: "200px", height: "auto" }} />

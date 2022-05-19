@@ -54,7 +54,7 @@ a.nav-link:nth-child(5) {
   box-shadow: 0 4px 2px -2px rgb(195, 195, 195);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .dropdown:hover .dropdown-menu {
     display: initial;
   }
