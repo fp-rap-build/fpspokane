@@ -17,7 +17,7 @@ function Navigation() {
 
   return (
     <>
-      <Navbar expand="lg" style={{ margin: 0 }} id="for-shadow">
+      <Navbar expand="xl" style={{ margin: 0 }} id="for-shadow">
         <Container fluid>
           <Navbar.Brand href="/">
             <img src={logo} style={{ maxWidth: "200px", height: "auto" }} />
@@ -35,8 +35,13 @@ function Navigation() {
                 title="Who We Are"
                 id="navbarScrollingDropdown"
                 renderMenuOnMount
-                onClick={() => navigate("/whoweare")}
               >
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/whoweare"
+                >
+                  WHO WE ARE
+                </NavDropdown.Item>
                 <NavDropdown.Item
                   className="dropdown-menu-to-hide"
                   href="/mission"
@@ -61,8 +66,13 @@ function Navigation() {
                 title="What We Do"
                 id="navbarScrollingDropdown"
                 renderMenuOnMount
-                onClick={() => navigate("/whatwedo")}
               >
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/whatwedo"
+                >
+                  WHAT WE DO
+                </NavDropdown.Item>
                 <NavDropdown.Item href="/needHelp">NEED HELP?</NavDropdown.Item>
                 <NavDropdown.Item href="/prevent">PREVENT</NavDropdown.Item>
                 <NavDropdown.Item href="/hap">
@@ -81,8 +91,13 @@ function Navigation() {
                 title="Ways To Give"
                 id="navbarScrollingDropdown"
                 renderMenuOnMount
-                onClick={() => navigate("/give")}
               >
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/give"
+                >
+                  WAYS TO GIVE
+                </NavDropdown.Item>
                 <NavDropdown.Item href="/goods-items">
                   GOODS & ITEMS
                 </NavDropdown.Item>
@@ -98,8 +113,13 @@ function Navigation() {
                 renderMenuOnMount
                 title="Events"
                 id="navbarScrollingDropdown"
-                onClick={() => navigate("/events")}
               >
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/events"
+                >
+                  EVENTS
+                </NavDropdown.Item>
                 <NavDropdown.Item href="/ungala">UnGala 2022</NavDropdown.Item>
                 <NavDropdown.Item href="/nightwithoutabed">
                   Night w/o A Bed
