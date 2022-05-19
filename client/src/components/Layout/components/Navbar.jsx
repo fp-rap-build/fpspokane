@@ -1,33 +1,47 @@
-import React from "react";
+import "./Navbar.css";
 
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+
+import React, { useState } from "react";
 import logo from "../../../images/familypromiselogo.png";
-
-import { Navbar, NavDropdown, Nav, Container } from "react-bootstrap";
-
-
+import { navigate } from "gatsby";
 
 function Navigation() {
+
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="xl" style={{ margin: 0 }} id="for-shadow" >
         <Container fluid>
           <Navbar.Brand href="/">
-            <img src={logo} style={{ maxWidth: "200px", height: "auto" }} />
+            <img
+              src={logo}
+              style={{ maxWidth: "200px", height: "auto", maxHeight: "100%" }}
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
 
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="justify-content-end"
-              style={{width: "100%" }}
+              style={{ width: "100%" }}
               navbarScroll
             >
               <NavDropdown
                 className="ml-auto"
                 title="Who We Are"
                 id="navbarScrollingDropdown"
+                renderMenuOnMount
               >
-                <NavDropdown.Item href="/mission">
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/whoweare"
+                >
+                  WHO WE ARE
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/mission"
+                >
                   MISSION & VISION
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/core-values">
@@ -44,8 +58,17 @@ function Navigation() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/stories">STORIES</NavDropdown.Item>
               </NavDropdown>
-
-              <NavDropdown title="What We Do" id="navbarScrollingDropdown">
+              <NavDropdown
+                title="What We Do"
+                id="navbarScrollingDropdown"
+                renderMenuOnMount
+              >
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/whatwedo"
+                >
+                  WHAT WE DO
+                </NavDropdown.Item>
                 <NavDropdown.Item href="/needHelp">NEED HELP?</NavDropdown.Item>
                 <NavDropdown.Item href="/prevent">PREVENT</NavDropdown.Item>
                 <NavDropdown.Item href="/hap">
@@ -60,8 +83,17 @@ function Navigation() {
                   COVID 19 RESPONSE
                 </NavDropdown.Item>
               </NavDropdown>
-
-              <NavDropdown title="Ways To Give" id="navbarScrollingDropdown">
+              <NavDropdown
+                title="Ways To Give"
+                id="navbarScrollingDropdown"
+                renderMenuOnMount
+              >
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/give"
+                >
+                  WAYS TO GIVE
+                </NavDropdown.Item>
                 <NavDropdown.Item href="/goods-items">
                   GOODS & ITEMS
                 </NavDropdown.Item>
@@ -73,11 +105,18 @@ function Navigation() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/careers">CAREERS</NavDropdown.Item>
               </NavDropdown>
-
-              <NavDropdown title="Events" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/ungala">
-                  UnGala 2022
+              <NavDropdown
+                renderMenuOnMount
+                title="Events"
+                id="navbarScrollingDropdown"
+              >
+                <NavDropdown.Item
+                  className="dropdown-menu-to-hide"
+                  href="/events"
+                >
+                  EVENTS
                 </NavDropdown.Item>
+                <NavDropdown.Item href="/ungala">UnGala 2022</NavDropdown.Item>
                 <NavDropdown.Item href="/nightwithoutabed">
                   Night w/o A Bed
                 </NavDropdown.Item>
