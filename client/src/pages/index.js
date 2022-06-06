@@ -30,7 +30,7 @@ const IndexPage = () => {
     <main className={styles.container}>
       <HeaderCarousel />
       <section className={styles.sectionA}>
-        <h1>We are Family Promise of Spokane. </h1>
+        <h1>We are Cornerstone Community Church </h1>
         <p>
           Equipping families & communities to end the cycle of homelessness.
           <br />
